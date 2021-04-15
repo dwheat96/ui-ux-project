@@ -1,0 +1,73 @@
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightslategray;
+    text-decoration: none;
+}
+
+footer.photoCredit {
+    font-family: "Lucida Grande";
+    color: aliceblue;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    position: absolute; bottom: 5px;
+}
+.links {
+    text-align: center;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.links h3 {
+    display: inline-block;
+    position: relative;
+}
+
+
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(50px, 500px);
+    margin: 0 10rem;
+}
+.one {
+    grid-column: 1;
+    grid-row: 1 / 5;
+}
+.two {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+.three {
+    grid-column: 2 / 3;
+    grid-row: 2 / 5;
+}
+.four {
+    grid-column: 3 / 4;
+    grid-row: 2 / 5;
+}
+
+img {
+    max-height: 500px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.card > div {
+    background: antiquewhite;
+    padding: 1em
+}
+
+.cardh1 {
+    font-family: "Lucida Grande";
+    color: aliceblue;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    text-align: center;
+}
