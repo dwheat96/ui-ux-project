@@ -14,6 +14,7 @@ footer.photoCredit {
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     position: absolute; bottom: 5px;
 }
+
 .links {
     text-align: center;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
@@ -24,8 +25,6 @@ footer.photoCredit {
     position: relative;
 }
 
-
-
 .card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -34,18 +33,22 @@ footer.photoCredit {
     grid-auto-columns: minmax(50px, 500px);
     margin: 0 10rem;
 }
+
 .one {
     grid-column: 1;
     grid-row: 1 / 5;
 }
+
 .two {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
 }
+
 .three {
     grid-column: 2 / 3;
     grid-row: 2 / 5;
 }
+
 .four {
     grid-column: 3 / 4;
     grid-row: 2 / 5;
@@ -70,4 +73,64 @@ img {
     color: aliceblue;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-gap: 10px;
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    .gallery {
+        overflow: scroll;
+    }
+
+    .smaller-nav {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .smaller-nav {
+        height: 200px;
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .smaller-nav {
+        object-fit: cover;
+    }
+
+    .gallery {
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+
+    .gallery__img {
+        scroll-snap-align: start;
+        margin-bottom: 10px;
+        min-height: 100vh;
+        object-fit: cover;
+
+    }
+
+    .smaller-nav {
+        object-fit: cover;
+        filter: saturate(0);
+        transition: 0.3s ease;
+    }
+
+    .smaller-nav:hover {
+        transform: scale(1.05);
+        filter: saturate(1);
+    }
+
 }
